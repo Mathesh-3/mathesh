@@ -2,6 +2,24 @@
 <html lang="en">
 
 <head>
+	<!-- Event snippet for Page view conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17721667543/-asxCOq1o_EbENffrIJC',
+      'value': 1.0,
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17721667543"></script>
 <script>
@@ -683,6 +701,7 @@ Sign up now for exclusive content and offers straight to your inbox!</p>
 
 
 </html>
+
 
 
 
